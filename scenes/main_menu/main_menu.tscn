@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://wfs1yfqhoy85"]
+
+[ext_resource type="Script" uid="uid://c7cjiltyly4ej" path="res://button_exit.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://pvq0yoakac33" path="res://button_play.gd" id="1_7vrkn"]
+
+[node name="Node2D" type="Node2D" unique_id=1574517423]
+
+[node name="Button_play" type="Button" parent="." unique_id=811768862]
+offset_left = 339.0
+offset_top = 33.0
+offset_right = 885.0
+offset_bottom = 185.0
+theme_override_colors/font_color = Color(0.99607843, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "PLAY
+"
+script = ExtResource("1_7vrkn")
+
+[node name="Button_options" type="Button" parent="." unique_id=2136939904]
+offset_left = 339.0
+offset_top = 204.0
+offset_right = 885.0
+offset_bottom = 356.0
+theme_override_colors/font_color = Color(0.99607843, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "OPTIONS
+"
+
+[node name="Button_exit" type="Button" parent="." unique_id=1327709298]
+offset_left = 335.0
+offset_top = 375.0
+offset_right = 881.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0.99607843, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "EXIT
+"
+script = ExtResource("1_06t4h")
+
+[connection signal="pressed" from="Button_play" to="Button_play" method="_on_pressed"]
+[connection signal="pressed" from="Button_exit" to="Button_exit" method="_on_pressed"]

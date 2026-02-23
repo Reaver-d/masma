@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bo2cmp4hcr8mb"]
+
+[ext_resource type="PackedScene" uid="uid://052en3bnt7l3" path="res://scenes/mc/mc.tscn" id="1_m7npr"]
+[ext_resource type="PackedScene" uid="uid://blwnls0ts8pp" path="res://scenes/characters/characters.tscn" id="2_da6vm"]
+[ext_resource type="PackedScene" uid="uid://dl2bnna1y4ye3" path="res://scenes/card/card.tscn" id="3_st4qh"]
+[ext_resource type="Script" uid="uid://djq87jyh5jeom" path="res://codes/area_2d.gd" id="4_51e2l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_51e2l"]
+distance = -46.0
+
+[node name="Node2D" type="Node2D" unique_id=742630009]
+
+[node name="Node" parent="." unique_id=54370706 instance=ExtResource("1_m7npr")]
+position = Vector2(160, 292)
+
+[node name="AnimatedSprite2D" parent="." unique_id=387429580 instance=ExtResource("2_da6vm")]
+position = Vector2(1009, 233)
+
+[node name="Button" type="Button" parent="." unique_id=2125743462]
+offset_left = 762.0
+offset_top = 377.0
+offset_right = 1135.0
+offset_bottom = 508.0
+text = "end turn
+"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1850844109]
+script = ExtResource("4_51e2l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=191726432]
+position = Vector2(441, 232)
+shape = SubResource("WorldBoundaryShape2D_51e2l")
+
+[node name="StaticBody2D" parent="." unique_id=1529321133 instance=ExtResource("3_st4qh")]
+position = Vector2(416, 469)
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
