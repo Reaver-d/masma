@@ -14,7 +14,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=2062043293]
+[node name="mc" type="AnimatedSprite2D" unique_id=2062043293]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_7kbnp")
 script = ExtResource("2_hv4e6")

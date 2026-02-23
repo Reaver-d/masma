@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://blwnls0ts8pp"]
 
 [ext_resource type="Texture2D" uid="uid://ddpbewihbuaja" path="res://assets/IMG_20260222_123612.png" id="1_y5eay"]
+<<<<<<< Updated upstream
+[ext_resource type="Script" uid="uid://bc3d7jojoemp3" path="res://codes/characters.gd" id="2_2ey0s"]
+=======
+[ext_resource type="Script" uid="uid://12u1tnhl2jqi" path="res://codes/enemy.gd" id="2_2ey0s"]
+>>>>>>> Stashed changes
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y5eay"]
 animations = [{
@@ -13,6 +18,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=387429580]
+[node name="enemy" type="AnimatedSprite2D" unique_id=387429580]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_y5eay")
+script = ExtResource("2_2ey0s")
