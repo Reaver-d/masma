@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-fight="*uid://dhk88objo2lwk"
+data="*uid://dhk88objo2lwk"
 
 [input]
 
