@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bn77am2o2671j"]
+
+[ext_resource type="Texture2D" uid="uid://dk3c1ao2hp85a" path="res://assets/заглушка_для_карты.png" id="1_4xfga"]
+[ext_resource type="Script" uid="uid://dy4i2pv8xwogu" path="res://scenes/map/1.gd" id="1_fcby6"]
+[ext_resource type="Script" uid="uid://ovx0dcgnji8m" path="res://scenes/map/заглушка_для_карты.gd" id="2_04w0f"]
+[ext_resource type="Script" uid="uid://cpsrongndxpx" path="res://scenes/map/2.gd" id="2_jcaow"]
+[ext_resource type="Script" uid="uid://c11ih8iupf1nq" path="res://scenes/map/3.gd" id="3_04w0f"]
+[ext_resource type="Script" uid="uid://gebashm53hkn" path="res://scenes/map/4.gd" id="4_sqgf4"]
+[ext_resource type="Script" uid="uid://bsfxeexjur8sc" path="res://scenes/map/elite.gd" id="5_vvrx0"]
+
+[node name="Map" type="Node2D" unique_id=924691690]
+
+[node name="ЗаглушкаДляКарты" type="Sprite2D" parent="." unique_id=464378453]
+position = Vector2(576.49994, 324.5)
+scale = Vector2(0.5994791, 0.59907407)
+texture = ExtResource("1_4xfga")
+script = ExtResource("2_04w0f")
+
+[node name="1" type="Button" parent="." unique_id=1869287443]
+offset_left = 29.0
+offset_top = 262.0
+offset_right = 56.0
+offset_bottom = 310.0
+text = "1 файт
+"
+script = ExtResource("1_fcby6")
+
+[node name="2" type="Button" parent="." unique_id=1932276592]
+offset_left = 210.0
+offset_top = 200.0
+offset_right = 237.0
+offset_bottom = 248.0
+text = "2 файт
+"
+script = ExtResource("2_jcaow")
+
+[node name="3" type="Button" parent="." unique_id=629373252]
+offset_left = 404.0
+offset_top = 307.0
+offset_right = 431.0
+offset_bottom = 355.0
+text = "3 файт
+"
+script = ExtResource("3_04w0f")
+
+[node name="4" type="Button" parent="." unique_id=1742156322]
+offset_left = 650.0
+offset_top = 184.0
+offset_right = 677.0
+offset_bottom = 232.0
+text = "4 файт
+"
+script = ExtResource("4_sqgf4")
+
+[node name="elite" type="Button" parent="." unique_id=1807231761]
+offset_left = 1018.0
+offset_top = 289.0
+offset_right = 1045.0
+offset_bottom = 337.0
+text = "Элитник
+"
+script = ExtResource("5_vvrx0")
+
+[connection signal="pressed" from="1" to="1" method="_on_pressed"]
+[connection signal="pressed" from="2" to="2" method="_on_pressed"]
+[connection signal="pressed" from="3" to="3" method="_on_pressed"]
+[connection signal="pressed" from="4" to="4" method="_on_pressed"]
+[connection signal="pressed" from="elite" to="elite" method="_on_pressed"]

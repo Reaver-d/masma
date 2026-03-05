@@ -19,6 +19,10 @@ run/main_scene="uid://wfs1yfqhoy85"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+fight="*uid://dhk88objo2lwk"
+
 [input]
 
 click={

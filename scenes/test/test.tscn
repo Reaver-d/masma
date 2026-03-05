@@ -1,38 +1,74 @@
 [gd_scene format=3 uid="uid://bo2cmp4hcr8mb"]
 
+[ext_resource type="Script" uid="uid://bux3bbloixnhs" path="res://codes/end_turn.gd" id="1_k6n02"]
 [ext_resource type="PackedScene" uid="uid://052en3bnt7l3" path="res://scenes/mc/mc.tscn" id="1_m7npr"]
 [ext_resource type="PackedScene" uid="uid://blwnls0ts8pp" path="res://scenes/characters/characters.tscn" id="2_da6vm"]
 [ext_resource type="PackedScene" uid="uid://dl2bnna1y4ye3" path="res://scenes/card/card.tscn" id="3_st4qh"]
 [ext_resource type="Script" uid="uid://djq87jyh5jeom" path="res://codes/area_2d.gd" id="4_51e2l"]
+[ext_resource type="Script" uid="uid://crpcr473aqe3x" path="res://codes/labels.gd" id="5_oj4i3"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_51e2l"]
 distance = -46.0
 
 [node name="Node2D" type="Node2D" unique_id=742630009]
 
-[node name="Node" parent="." unique_id=54370706 instance=ExtResource("1_m7npr")]
-position = Vector2(160, 292)
-
-[node name="AnimatedSprite2D" parent="." unique_id=387429580 instance=ExtResource("2_da6vm")]
-position = Vector2(1009, 233)
-
-[node name="Button" type="Button" parent="." unique_id=2125743462]
+[node name="end_turn" type="Button" parent="." unique_id=2125743462]
 offset_left = 762.0
-offset_top = 377.0
+offset_top = 457.0
 offset_right = 1135.0
-offset_bottom = 508.0
+offset_bottom = 588.0
 text = "end turn
 "
+script = ExtResource("1_k6n02")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1850844109]
 script = ExtResource("4_51e2l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=191726432]
-position = Vector2(441, 232)
+position = Vector2(478, 337)
+rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_51e2l")
 
-[node name="StaticBody2D" parent="." unique_id=1529321133 instance=ExtResource("3_st4qh")]
-position = Vector2(416, 469)
+[node name="cards" type="Node" parent="." unique_id=1017498622]
 
+[node name="StaticBody2D" parent="cards" unique_id=1529321133 instance=ExtResource("3_st4qh")]
+position = Vector2(510, 558)
+
+[node name="StaticBody2D2" parent="cards" unique_id=1920543990 instance=ExtResource("3_st4qh")]
+position = Vector2(376, 562)
+
+[node name="enemy" parent="." unique_id=387429580 instance=ExtResource("2_da6vm")]
+position = Vector2(979, 231.00002)
+
+[node name="labels" type="Node" parent="." unique_id=637335567]
+script = ExtResource("5_oj4i3")
+
+[node name="mana" type="Label" parent="labels" unique_id=1541301434]
+offset_left = 16.0
+offset_top = 526.0
+offset_right = 169.0
+offset_bottom = 583.0
+text = "aaa
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="enemy_hp" type="Label" parent="labels" unique_id=2037917640]
+offset_left = 947.0
+offset_top = 35.0
+offset_right = 1159.0
+offset_bottom = 74.0
+text = "aaa"
+
+[node name="player_hp" type="Label" parent="labels" unique_id=7782951]
+offset_left = 91.0
+offset_top = 23.0
+offset_right = 238.0
+offset_bottom = 56.0
+text = "aaa"
+
+[node name="mc" parent="." unique_id=2062043293 instance=ExtResource("1_m7npr")]
+position = Vector2(105, 278)
+
+[connection signal="pressed" from="end_turn" to="end_turn" method="_on_pressed"]
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]

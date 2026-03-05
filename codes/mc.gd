@@ -1,6 +1,6 @@
 extends AnimatedSprite2D
 
-var health = 30
+var hp = 30
 var mana = 3
 var cards = []
 

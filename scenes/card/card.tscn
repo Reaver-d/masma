@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://d2d33pffasal3" path="res://scenes/card/area_2d.gd" id="3_vtcvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_imta7"]
-size = Vector2(114, 167)
+size = Vector2(114, 168)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtcvk"]
 
@@ -20,8 +20,9 @@ texture = ExtResource("1_qnn7r")
 script = ExtResource("3_vtcvk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=7428670]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_imta7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=16962707]
 shape = SubResource("RectangleShape2D_vtcvk")
+
+[connection signal="hidden" from="." to="." method="_on_hidden"]

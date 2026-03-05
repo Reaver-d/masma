@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2jj5xdms1jms"]
+
+[ext_resource type="Script" uid="uid://dmcvehhmosdky" path="res://scenes/hero_select/button.gd" id="1_a6aad"]
+
+[node name="hero_select" type="Node2D" unique_id=880043353]
+
+[node name="Button" type="Button" parent="." unique_id=2076602029]
+offset_left = 406.0
+offset_top = 155.0
+offset_right = 635.0
+offset_bottom = 259.0
+text = "МАГ"
+script = ExtResource("1_a6aad")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
