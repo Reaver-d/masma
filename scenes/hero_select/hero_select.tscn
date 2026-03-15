@@ -5,11 +5,29 @@
 [node name="hero_select" type="Node2D" unique_id=880043353]
 
 [node name="Button" type="Button" parent="." unique_id=2076602029]
-offset_left = 406.0
-offset_top = 155.0
-offset_right = 635.0
-offset_bottom = 259.0
+offset_left = 132.0
+offset_top = 263.0
+offset_right = 361.0
+offset_bottom = 367.0
 text = "МАГ"
 script = ExtResource("1_a6aad")
 
+[node name="Button2" type="Button" parent="." unique_id=1288616062]
+offset_left = 462.0
+offset_top = 203.0
+offset_right = 691.0
+offset_bottom = 307.0
+text = "ВОИН"
+script = ExtResource("1_a6aad")
+
+[node name="Button3" type="Button" parent="." unique_id=883555929]
+offset_left = 658.0
+offset_top = 379.0
+offset_right = 887.0
+offset_bottom = 483.0
+text = "СИР РОГУЕ"
+script = ExtResource("1_a6aad")
+
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

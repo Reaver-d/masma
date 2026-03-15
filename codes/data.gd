@@ -8,3 +8,4 @@ var mana = 3
 var cards
 var gold
 var character
+var character_class;
