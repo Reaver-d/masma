@@ -2,7 +2,7 @@ extends StaticBody2D
 @onready var static_body_2d: StaticBody2D = $"."
 var clickable = true
 var dragging = false
-var click_radius = 100 # Size of the sprite.
+var click_radius = 60 # Size of the sprite.
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 var start_location
 var after_area = false

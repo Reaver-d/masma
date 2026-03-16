@@ -26,3 +26,5 @@ func _process(delta: float) -> void:
 	label_enemy_hp.text = "{enemy_hp}".format({enemy_hp = enemy_hp})
 	if enemy_hp <= 0:
 		get_tree().change_scene_to_file("res://scenes/main_menu/main_menu.tscn")
+	if mc_hp <= 0:
+		get_tree().quit()
