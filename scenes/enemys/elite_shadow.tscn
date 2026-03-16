@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ds7xj8s2ci1nr"]
+
+[ext_resource type="Texture2D" uid="uid://0nfngb7k3i18" path="res://assets/IMG_20260316_173101.png" id="1_3a18t"]
+[ext_resource type="Script" uid="uid://cror1acmlw3vd" path="res://codes/characters/enemy/elite_shadow/elite_shadow.gd" id="2_mqnlx"]
+
+[node name="elite_shadow" type="Sprite2D" unique_id=282121068]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_3a18t")
+script = ExtResource("2_mqnlx")

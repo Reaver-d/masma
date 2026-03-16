@@ -5,4 +5,5 @@ extends Button
 
 func _on_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/test/test.tscn")
-	#fight = 2
+	fight.enemys = "blue_slime"
+	fight.number += 1

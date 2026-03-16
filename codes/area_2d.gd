@@ -2,8 +2,6 @@ extends Area2D
 var d
 var areas
 @onready var area		: Area2D = $"."
-@onready var mc: AnimatedSprite2D = $"../mc"
-@onready var enemy: AnimatedSprite2D = $"../enemy"
 @onready var labels: Node = $"../labels"
 
 

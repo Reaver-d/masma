@@ -6,7 +6,7 @@ var click_radius = 70 # Size of the sprite.
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 var start_location
 var after_area = false
-var damage = 1
+var damage = 4
 var mana = 1
 var entered = false
 var type = "attack"

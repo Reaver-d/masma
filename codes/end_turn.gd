@@ -6,8 +6,7 @@ var enemy_dmg
 
 
 func _ready() -> void:
-	enemy_dmg = get_node("../enemy").dmg
-
+	enemy_dmg = get_node("../enemy").get_child(0).damage
 
 
 func _on_pressed() -> void:
