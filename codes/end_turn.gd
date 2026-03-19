@@ -3,6 +3,8 @@ extends Button
 var childs
 var enemy_dmg
 @onready var labels: Node = $"../labels"
+@onready var main: Node2D = $".."
+var card_name
 
 
 func _ready() -> void:
@@ -12,9 +14,14 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	childs = cards.get_children()
 	for i in range(len(childs)):
-		if childs[i].visible == false:
-			childs[i].visible = true
-			childs[i].clickable = true
+		card_name = ""
+		for j in str(childs[i]):
+			if j != "_":
+				card_name += j
+			else:
+				break
+		main.discard_pile.append(data.all_cards[card_name])
+		childs[i].queue_free()
 	if data.temporary_hp != 0:
 		data.temporary_hp -= enemy_dmg
 	else:
@@ -23,3 +30,4 @@ func _on_pressed() -> void:
 		data.current_hp += data.temporary_hp
 		data.temporary_hp = 0
 	labels.current_mana = labels.max_mana
+	main.card_draw(4)

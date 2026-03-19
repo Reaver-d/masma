@@ -21,8 +21,7 @@ func _input(event):
 			if dragging and not event.pressed:
 				dragging = false
 				if after_area:
-					static_body_2d.visible = false
-					clickable = false
+					queue_free()
 				static_body_2d.position = start_location
 
 		if event is InputEventMouseMotion and dragging:
