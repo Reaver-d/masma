@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ckvlw1yigqm38"]
+
+[ext_resource type="Texture2D" uid="uid://dnvasy3mc428m" path="res://assets/IMG_20260316_171524.png" id="1_i4s0w"]
+[ext_resource type="Script" uid="uid://bmql1e4svgqpr" path="res://codes/characters/enemy/pink_slime/pink_slime.gd" id="2_74swf"]
+
+[node name="pink_slime" type="Sprite2D" unique_id=1271630143]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_i4s0w")
+script = ExtResource("2_74swf")

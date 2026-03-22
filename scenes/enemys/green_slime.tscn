@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://clkms7nfkmm5u"]
+
+[ext_resource type="Texture2D" uid="uid://mnoi4afvpeqf" path="res://assets/IMG_20260316_171306.png" id="1_g0uwq"]
+[ext_resource type="Script" uid="uid://boy001yj6qxe1" path="res://codes/characters/enemy/green_slime/green_slime.gd" id="2_6ekb8"]
+
+[node name="green_slime" type="Sprite2D" unique_id=52994684]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_g0uwq")
+script = ExtResource("2_6ekb8")
