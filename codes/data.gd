@@ -8,7 +8,6 @@ var temporary_hp = 0
 var max_hp = 30
 var current_hp = 30
 var mana = 3
-var cards
 var gold
 var character
 var character_class;
@@ -17,4 +16,3 @@ load("res://scenes/cards/defend/defend.tscn"), load("res://scenes/cards/defend/d
 load("res://scenes/cards/attack/attack.tscn"), load("res://scenes/cards/attack/attack.tscn"), 
 load("res://scenes/cards/defend/defend.tscn"), load("res://scenes/cards/defend/defend.tscn"), 
 load("res://scenes/cards/attack/attack.tscn")]
-var character 
