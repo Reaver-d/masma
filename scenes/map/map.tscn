@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://bn77am2o2671j"]
 
-[ext_resource type="Texture2D" uid="uid://dk3c1ao2hp85a" path="res://assets/заглушка_для_карты.png" id="1_4xfga"]
+[ext_resource type="Script" uid="uid://i0p7qhq6py01" path="res://codes/map.gd" id="1_04w0f"]
 [ext_resource type="Script" uid="uid://dy4i2pv8xwogu" path="res://scenes/map/1.gd" id="1_fcby6"]
-[ext_resource type="Script" uid="uid://ovx0dcgnji8m" path="res://scenes/map/заглушка_для_карты.gd" id="2_04w0f"]
+[ext_resource type="Texture2D" uid="uid://glpxu82ux6mv" path="res://assets/5314321782087031332.jpg" id="1_jcaow"]
 [ext_resource type="Script" uid="uid://cpsrongndxpx" path="res://scenes/map/2.gd" id="2_jcaow"]
 [ext_resource type="Script" uid="uid://c11ih8iupf1nq" path="res://scenes/map/3.gd" id="3_04w0f"]
 [ext_resource type="Script" uid="uid://gebashm53hkn" path="res://scenes/map/4.gd" id="4_sqgf4"]
 [ext_resource type="Script" uid="uid://bsfxeexjur8sc" path="res://scenes/map/elite.gd" id="5_vvrx0"]
 
 [node name="Map" type="Node2D" unique_id=924691690]
+script = ExtResource("1_04w0f")
 
-[node name="ЗаглушкаДляКарты" type="Sprite2D" parent="." unique_id=464378453]
-position = Vector2(576.49994, 324.5)
-scale = Vector2(0.5994791, 0.59907407)
-texture = ExtResource("1_4xfga")
-script = ExtResource("2_04w0f")
+[node name="5314321782087031332" type="Sprite2D" parent="." unique_id=51680741]
+position = Vector2(576, 323.75)
+scale = Vector2(1.5673468, 1.4159389)
+texture = ExtResource("1_jcaow")
 
 [node name="1" type="Button" parent="." unique_id=1869287443]
 offset_left = 29.0

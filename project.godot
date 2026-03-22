@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 data="*uid://dhk88objo2lwk"
+fight="*uid://bnh7x0uufkglk"
 
 [input]
 

@@ -2,7 +2,7 @@ extends StaticBody2D
 @onready var static_body_2d: StaticBody2D = $"."
 var clickable = true
 var dragging = false
-var click_radius = 100 # Size of the sprite.
+var click_radius = 60 # Size of the sprite.
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 var start_location
 var after_area = false
@@ -21,8 +21,7 @@ func _input(event):
 			if dragging and not event.pressed:
 				dragging = false
 				if after_area:
-					static_body_2d.visible = false
-					clickable = false
+					queue_free()
 				static_body_2d.position = start_location
 
 		if event is InputEventMouseMotion and dragging:

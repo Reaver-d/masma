@@ -4,25 +4,30 @@
 [ext_resource type="Texture2D" uid="uid://m5e7qew0tief" path="res://assets/Picsart_26-02-22_13-41-26-098.png" id="2_aggpm"]
 [ext_resource type="Script" uid="uid://d2d33pffasal3" path="res://scenes/cards/area_2d.gd" id="3_xw246"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_imta7"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtcvk"]
+size = Vector2(114, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sje2g"]
 size = Vector2(114, 168)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtcvk"]
-
 [node name="StaticBody2D" type="StaticBody2D" unique_id=1529321133]
+input_pickable = true
 script = ExtResource("1_sje2g")
 
 [node name="Picsart260222134126098" type="Sprite2D" parent="." unique_id=1573514458]
+rotation = 3.1415927
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_aggpm")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1769323607]
-script = ExtResource("3_xw246")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=7428670]
-shape = SubResource("RectangleShape2D_imta7")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=16962707]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_vtcvk")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=327763874]
+script = ExtResource("3_xw246")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=703924614]
+shape = SubResource("RectangleShape2D_sje2g")
+
 [connection signal="hidden" from="." to="." method="_on_hidden"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

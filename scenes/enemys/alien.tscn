@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ctv1xitbwd403"]
+
+[ext_resource type="Texture2D" uid="uid://bbirt1ud60xul" path="res://assets/враг lvl 3.1.png" id="1_1kcms"]
+[ext_resource type="Script" uid="uid://chk02k07vugos" path="res://codes/characters/enemy/alien/alien.gd" id="2_jy6br"]
+
+[node name="alien" type="Sprite2D" unique_id=2129720307]
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_1kcms")
+script = ExtResource("2_jy6br")
