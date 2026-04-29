@@ -36,4 +36,4 @@
 **Выполненные задачи:**
 - создана ветка `feature/Dobrokhotov`;
 - дополнен `README.md`;
-- добавлен файл `feature.txt`.
+- добавлен файл `feature.txt`.# laba5
